@@ -1,0 +1,117 @@
+aid: canadian-western-bank
+name: Canadian Western Bank
+review:
+  question: Does Canadian Western Bank expose a first-party public developer API, developer portal, or a documented open-finance / Consumer-Driven Banking data-access API?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Canadian Western Bank (CWB) publishes no first-party public developer portal
+    and no documented public API. Probes of the conventional developer and API
+    hosts (developer.cwbank.com, developers.cwbank.com, api.cwbank.com,
+    apis.cwbank.com) do not resolve (connection code 000). The public cwbank.com
+    domain itself now 301-redirects to National Bank of Canada (nbc.ca) — a
+    direct consequence of National Bank's acquisition of CWB (announced June 11,
+    2024; closed early 2025), after which CWB operates as a subsidiary and its
+    brand is being wound down. Because every path under cwbank.com resolves to
+    the National Bank business landing page, requests such as /developers and
+    /api return HTTP 200 only as the redirect target, not as genuine developer
+    resources; no API reference, SDK, sandbox, or downloadable OpenAPI/Swagger
+    exists.
+
+    This posture is consistent with Canada's voluntary, still-fragmented
+    open-finance landscape. The federal Consumer-Driven Banking (CDB) framework
+    was legislated in 2024 (Budget 2024 / Fall Economic Statement 2024, with the
+    Financial Consumer Agency of Canada / FCAC as overseer) but is NOT yet
+    operational, so there is no mandated open-banking API contract in force.
+    Consumer-permissioned account and transaction data for CWB is reached only
+    INDIRECTLY through third-party data aggregators: Plaid is confirmed via
+    external aggregator coverage directories (OpenBankingTracker lists CWB as
+    supported by aggregator connectivity with no first-party API products).
+    As a National Bank of Canada subsidiary, CWB also sits within an ecosystem in
+    which the Canadian aggregator Flinks (National Bank-owned) is prominent,
+    though no first-party CWB Flinks integration is separately documented.
+
+    No first-party FDX-conformant data-access endpoint, no published CDB
+    data endpoint, and no Interac or Real-Time Rail (Payments Canada) developer
+    API were found on CWB's own properties. Because there is no documented
+    first-party surface, no authentication model (OAuth2/OIDC, API-key, or mTLS)
+    could be confirmed, and no specification could be harvested. This is an
+    honest identity-only, aggregator-only record for an institution now absorbed
+    into National Bank of Canada.
+  institution:
+    chartertype: Schedule I domestic chartered bank
+    headquarters: Edmonton, Alberta, Canada
+    founded: 1988
+    totalAssets: ~CA$43 billion (2024)
+    ticker: "TSX: CWB (delisted following acquisition)"
+    parentCompany: National Bank of Canada
+    acquisitionAnnounced: '2024-06-11'
+    acquisitionClosed: early 2025
+    brandStatus: subsidiary of National Bank of Canada; branches being rebranded under National Bank
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalURL: ""
+    downloadableSpec: false
+    specProvenance: none
+    fdxParticipant: false
+    section1033Posture: not applicable (Canadian institution; US CFPB 1033 not applicable)
+    consumerDrivenBankingPosture: framework legislated (2024) but not operational; no published CDB endpoint
+    interacParticipation: not documented as a developer API
+    realTimeRailPosture: not documented as a developer API
+    aggregatorAccess:
+      - Plaid (confirmed via external aggregator directory)
+      - Flinks (National Bank-owned; ecosystem context, not a documented first-party CWB integration)
+    authModel: unknown (no first-party API documented)
+  transports:
+    - protocol: REST
+      documented: false
+      note: No first-party REST API is documented by Canadian Western Bank.
+  probes:
+    - url: https://developer.cwbank.com
+      status: 000
+      note: Host does not resolve (getaddrinfo ENOTFOUND / no connection).
+    - url: https://developers.cwbank.com
+      status: 000
+      note: Host does not resolve / no connection.
+    - url: https://api.cwbank.com
+      status: 000
+      note: Host does not resolve / no connection.
+    - url: https://apis.cwbank.com
+      status: 000
+      note: Host does not resolve / no connection.
+    - url: https://www.cwbank.com/
+      status: 301
+      note: Redirects to https://nbc.ca/en/business.html (National Bank of Canada) — whole domain now redirects post-acquisition.
+    - url: https://www.cwbank.com/developers
+      status: 200
+      note: HTTP 200 only because the domain redirects to the National Bank business page; not a genuine developer page.
+    - url: https://www.cwbank.com/api
+      status: 200
+      note: HTTP 200 only because the domain redirects to the National Bank business page; not a genuine API page.
+sources:
+  - url: https://www.cwbank.com/
+    type: Website
+    note: CWB domain 301-redirects to National Bank of Canada (nbc.ca/en/business.html); no developer or API content.
+  - url: https://www.nbc.ca/
+    type: ParentCompany
+    note: National Bank of Canada — parent following the acquisition of CWB.
+  - url: https://en.wikipedia.org/wiki/Canadian_Western_Bank
+    type: Reference
+    note: Schedule I bank, Edmonton AB, founded 1988; ~CA$43B assets; TSX CWB; acquired by National Bank of Canada (announced June 11, 2024, closed 2025).
+  - url: https://www.openbankingtracker.com/provider/canadian-western-bank
+    type: ThirdPartyDirectory
+    note: No first-party API products listed; access via aggregators; Plaid confirmed. No FDX support noted.
+  - url: https://www.linkedin.com/company/canadian-western-bank
+    type: LinkedIn
+    note: Corporate LinkedIn presence (HTTP 200).
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: |
+    No first-party public API or downloadable specification exists to harvest.
+    The cwbank.com domain now redirects entirely to National Bank of Canada
+    following the acquisition. The record is identity-only with an honest
+    aggregator-only open-finance posture; apis[] is intentionally empty rather
+    than padded with fabricated entries.
