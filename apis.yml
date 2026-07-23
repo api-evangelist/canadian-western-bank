@@ -41,6 +41,10 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/canadian-western-bank-domain-security.yml
+- type: LLMsTxt
+  url: llms/canadian-western-bank-llms.txt
 - type: Website
   url: https://www.cwbank.com/
 - type: ParentCompany

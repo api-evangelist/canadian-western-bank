@@ -1,0 +1,25 @@
+# Canadian Western Bank (CWB)
+
+> Canadian Western Bank (CWB) is a Schedule I domestic chartered bank founded in 1988, headquartered in Edmonton, Alberta. In June 2024 National Bank of Canada agreed to acquire CWB (~CA$5B all-share deal); the acquisition closed in early 2025 and CWB now operates as a subsidiary of National Bank of Canada, with its brand being wound down. CWB publishes no first-party public developer portal and no documented public API. The entire cwbank.com domain now 301-redirects to National Bank of Canada (nbc.ca). This is an honest identity-only, aggregator-only record.
+
+## Status
+- No first-party public developer portal or documented public API.
+- Developer/API hostnames (developer.cwbank.com, api.cwbank.com) do not resolve.
+- cwbank.com 301-redirects to https://nbc.ca/en/business.html following the acquisition.
+- No first-party FDX-conformant data-access API was found.
+- Canada's Consumer-Driven Banking framework was legislated in 2024 (Budget 2024 / FCAC) but is not yet operational; no mandated open-banking API contract is in force.
+
+## Data access
+- Consumer-permissioned account/transaction data is reached only indirectly via third-party aggregators.
+- Plaid is confirmed via external aggregator coverage directories.
+- Flinks (National Bank-owned) is ecosystem context, not a documented first-party CWB integration.
+
+## Identity
+- [Website (redirects to National Bank)](https://www.cwbank.com/)
+- [Parent company — National Bank of Canada](https://www.nbc.ca/)
+- [LinkedIn](https://www.linkedin.com/company/canadian-western-bank)
+- [X / Twitter](https://x.com/cwbank)
+- [Open Banking Tracker profile](https://www.openbankingtracker.com/provider/canadian-western-bank)
+
+## Artifacts
+- [Domain security probe (TLS/HSTS/DNSSEC/CAA/SPF/DMARC)](security/canadian-western-bank-domain-security.yml)
