@@ -25,6 +25,17 @@ description: >-
   confirmed via aggregator coverage directories). No first-party FDX-conformant
   data-access API was found. This is an honest identity-only, aggregator-only
   record for an institution now absorbed into National Bank of Canada.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Financial-Services
