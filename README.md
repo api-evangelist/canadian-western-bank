@@ -1,4 +1,4 @@
-# Canadian Western Bank (canadian-western-bank)
+# Canadian Western Bank
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,53 +64,79 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Canadian Western Bank (CWB) is a Schedule I domestic chartered bank founded in 1988 and headquartered in Edmonton, Alberta. Historically the largest publicly traded Schedule I bank headquartered in Western Canada (TSX: CWB) with roughly CA$43 billion in assets, it focused on full-service business and commercial banking, personal banking, equipment financing and leasing, trust services, and wealth management. In June 2024 National Bank of Canada agreed to acquire CWB in an all-share deal valued at roughly CA$5 billion; the acquisition closed in early 2025, and CWB now operates as a subsidiary of National Bank of Canada with its branches and brand being rebranded under National Bank.
+Canadian Western Bank (CWB) is a Schedule I domestic chartered bank founded in 1988 (through the merger of the Bank of Alberta and Western & Pacific Bank) and headquartered in Edmonton, Alberta at Canadian Western Bank Place. Historically the largest publicly traded Schedule I bank headquartered in Western Canada and listed on the Toronto Stock Exchange (TSX: CWB), it held roughly CA$43 billion in assets and focused on full-service business and commercial banking, personal banking, equipment financing and leasing, trust services, and wealth management across a network of affiliated entities. In June 2024 National Bank of Canada agreed to acquire CWB in an all-share deal valued at roughly CA$5 billion, and the acquisition closed in early 2025; CWB now operates as a subsidiary of National Bank of Canada and its branches and brand are being wound down and rebranded under National Bank. Consistent with Canada's voluntary and still fragmented open-finance landscape — the federal Consumer-Driven Banking framework was legislated in 2024 (Budget 2024 / Fall Economic Statement, overseen by the FCAC) but is not yet operational — CWB publishes no first-party public developer portal and no documented public API. Its developer and API hostnames do not resolve, and the entire cwbank.com domain now 301-redirects to National Bank of Canada (nbc.ca). Consumer-permissioned account and transaction data is reached only indirectly through third-party data aggregators (Plaid is confirmed via aggregator coverage directories). No first-party FDX-conformant data-access API was found. This is an honest identity-only, aggregator-only record for an institution now absorbed into National Bank of Canada.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/canadian-western-bank/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/canadian-western-bank/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · Canada · Schedule I Bank · Business Banking · Alberta · Open Finance · Consumer-Driven Banking
 
-## Open Finance & API Posture
+## Canadian Western Bank on APIs.io
 
-Canada's open-finance landscape is voluntary and still fragmented. The federal Consumer-Driven Banking (CDB) framework was legislated in 2024 (Budget 2024 / Fall Economic Statement, overseen by the Financial Consumer Agency of Canada / FCAC) but is **not yet operational**, so there is no mandated open-banking contract in force today.
+Everything profiled for Canadian Western Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/canadian-western-bank/](https://apis.io/providers/canadian-western-bank/)** — or go straight to one of the APIs or properties below.
 
-Against that backdrop, Canadian Western Bank publishes **no first-party public developer portal and no documented public API**:
+### Published properties
 
-- Developer and API hostnames (`developer.cwbank.com`, `developers.cwbank.com`, `api.cwbank.com`, `apis.cwbank.com`) do **not resolve**.
-- The entire `cwbank.com` domain now **301-redirects to National Bank of Canada** (`nbc.ca`), reflecting the completed acquisition and brand wind-down.
-- No downloadable OpenAPI/Swagger specification, SDK, or sandbox was found.
-- Consumer-permissioned account and transaction data is reached only **indirectly through third-party data aggregators** — Plaid is confirmed via aggregator coverage directories. As a National Bank of Canada subsidiary, CWB also sits within an ecosystem where the Canadian aggregator Flinks (National Bank–owned) is prominent, though no first-party CWB integration is documented.
-- No first-party FDX-conformant data-access API and no published Consumer-Driven Banking data endpoint were found (the CDB framework is not live).
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-This is an honest identity-only, aggregator-only record for an institution now absorbed into National Bank of Canada.
+#### Security (1)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Financial Services
-- Banking
-- Canada
-- Schedule I Bank
-- Business Banking
-- Alberta
-- Open Finance
-- Consumer-Driven Banking
-- Data Aggregation
+- [Canadian Western Bank Domain Security](https://apis.io/security/canadian-western-bank/canadian-western-bank-domain-security/)
 
-## Timestamps
+## Where to find this API
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-## APIs
+- [Website](https://www.cwbank.com/)
 
-No first-party public APIs are documented. `apis[]` is intentionally empty rather than padded with fabricated entries.
+## API Evangelist rating
 
-## Common Properties
+**Kin Score 3.2** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-- [Website](https://www.cwbank.com/) (redirects to National Bank of Canada)
-- [Parent Company — National Bank of Canada](https://www.nbc.ca/)
-- [LinkedIn](https://www.linkedin.com/company/canadian-western-bank)
-- [Twitter / X](https://x.com/cwbank)
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
 
-## Maintainers
+**Agent readiness 0.0** — human-only
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/canadian-western-bank/](https://apis.io/providers/canadian-western-bank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Canadian Western Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/canadian-western-bank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
